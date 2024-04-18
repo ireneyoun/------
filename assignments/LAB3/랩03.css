@@ -1,0 +1,53 @@
+#top_header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "box2 box2 box1";
+}
+
+#navi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style-type: none;
+  background-color: plum;
+  padding-top: 50px;
+  padding-right: 30px;
+}
+
+#navi > li li {
+  background-color: plum;
+  display: none;
+  text-decoration: none;
+}
+
+#navi > li a {
+  text-decoration: none;
+  color: white;
+}
+
+#title {
+  background-color: plum;
+  grid-area: box2;
+  color: white;
+  padding-left: 20px;
+}
+
+nav {
+  background-color: plum;
+  grid-area: box1;
+}
+
+#navi > li:hover > ul {
+  display: block;
+}
+
+#navi > li {
+  position: relative;
+}
+
+#navi > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
